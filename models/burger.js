@@ -15,5 +15,15 @@ module.exports=function(sequelize,DataTypes){
     },{
         freezeTableName: true
     })
+
+
+    // Burger.associate=function(models){
+    //     Burger.hasOne(models.Temperature,{
+    //         foreignKey:{
+    //             allowNull:false
+    //         }
+    //     })
+    // }
+
     return Burger
 }

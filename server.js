@@ -27,6 +27,12 @@ app.use(routes);
 
 // Start our server so that it can begin listening to client requests.
 db.sequelize.sync({ force: false }).then(function() {
+  // db.Temperature.create({
+  //   temp_description:"Rare"
+  // })
+  // db.Temperature.create({
+  //   temp_description:"Medium Rare"
+  // })
   app.listen(PORT, function() {
     console.log("Server listening on: http://localhost:" + PORT);
   });
