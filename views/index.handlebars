@@ -21,8 +21,8 @@
     <div class="row">
         <div class="col-4">
             <ul>
-                {{#each burgers}}
-                    {{#unless burger_devoured}}
+                {{#each result}}
+                    {{#unless dataValues.burger_devoured}}
                         {{>burger/burger-block devoured=1}}
                     {{/unless}}
                 {{/each}}
@@ -35,8 +35,8 @@
         <div class="col-1"></div>
         <div class="col-4">
             <ul>
-                {{#each burgers}}
-                    {{#if burger_devoured}}
+                {{#each result}}
+                    {{#if dataValues.burger_devoured}}
                         {{>burger/burger-block devoured=0}}
                     {{/if}}
                 {{/each}}

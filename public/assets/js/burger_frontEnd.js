@@ -4,10 +4,14 @@ $(document).ready(function () {
 
     $(".create-form").on("submit", function (event) {
         event.preventDefault()
+        if ($("#burgerName").val().trim()==""){
+            alert("Plese enter a name of the burger")
+        }
         var newBurger ={
           burger_name: $("#burgerName").val().trim()  
         } 
         console.log(newBurger)
+
 
         // Send post request
         $.ajax("/api/burger",{
